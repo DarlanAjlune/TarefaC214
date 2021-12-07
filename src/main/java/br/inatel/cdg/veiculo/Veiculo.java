@@ -2,6 +2,8 @@ package br.inatel.cdg.veiculo;
 
 import br.inatel.cdg.componente.Componente;
 import br.inatel.cdg.componente.Motor;
+import br.inatel.cdg.componente.Nitro;
+import br.inatel.cdg.componente.Turbo;
 import br.inatel.cdg.conexao.Conexao;
 
 import java.util.ArrayList;
@@ -24,6 +26,12 @@ public class Veiculo {
 
         if(componente instanceof Motor){
             this.velocidadePorSegundo += ((Motor) componente).aumentoVelocidadePorSegundo;
+        }
+        if(componente instanceof Turbo){
+            this.velocidadePorSegundo += ((Turbo) componente).aumentoVelocidadePorSegundo;
+        }
+        if(componente instanceof Nitro){
+            this.velocidadePorSegundo += ((Nitro) componente).aumentoVelocidadePorSegundo;
         }
 
     }
